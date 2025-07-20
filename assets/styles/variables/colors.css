@@ -1,0 +1,11 @@
+:root {
+    --color-black: #000;
+    --color-black-overlay: rgba(0, 0, 0, 0.8);
+    --color-pure-lamp: #fefea6;
+    --color-text-green: #cbfb83;
+    --color-lemon: #fffacd;
+    --main-background-gradient: radial-gradient(50% 50% at 50% 50%, #354228 0, #0f140a 100%);
+    --main-box-shadow-view: 0 0 2.8571428571rem #252925, inset 0 0 2rem 1.4285714286rem #000;
+  
+    --text-shadow-parametrs: 0 0 2.3px #d0fc7e, 0 0 4.6px #d0fc7e;
+}

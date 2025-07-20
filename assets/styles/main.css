@@ -1,0 +1,76 @@
+@import url(./variables/colors.css);
+@import url(./variables/animation.css);
+@import url(./variables/layers.css);
+@import url(./variables/typography.css);
+@import "normalize.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Handjet', ui-sans-serif, system-ui, sans-serif;
+    color: var(--color-text-green);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+
+    overflow: hidden;
+    background-color: var(--color-black);
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+  }
+
+  body::-webkit-scrollbar {
+    width: 6px;
+    padding-right: 20px;
+  }
+  body::-webkit-scrollbar-track {
+    background-color: var(--color-black);
+    border-radius: 4px;
+    margin: 0;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--color-text-green);
+    border-radius: 5px;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+    pointer-events: all !important;
+  }
+  
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+    margin: 0;
+  }
