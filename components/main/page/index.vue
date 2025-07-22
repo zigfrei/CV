@@ -160,6 +160,10 @@
         </div>
       </div>
     </div>
+    <div class="faq-content">
+      <base-title>Часто задаваемые вопросы</base-title>
+      <main-faq />
+    </div>
   </section>
 </template>
 
@@ -279,6 +283,16 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 16px;
+}
+
+.faq-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  border: thick double var(--color-text-green) ;
 }
 
 @media (max-width: 1100px) {
