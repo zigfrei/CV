@@ -16,6 +16,9 @@ useHead({
   { rel: "apple-touch-icon", sizes:"180x180", href: "/apple-touch-icon.png" },
   { rel: "manifest", href: "/site.webmanifest" }, 
   ],
+  meta: [
+    { name: "yandex-verification", content: "fca727eaa2be41f5" },
+  ]
 });
 </script>
 
