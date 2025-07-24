@@ -1,7 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const show = ref(false);
+
+onMounted(() => {
+    show.value = true;
+});
+</script>
 
 <template>
-  <section class="resume">
+  <section class="resume" :class="{ 'fade-in': show }">
     <div class="resume-header">
       <nuxt-img
         src="/avatar7.png"
@@ -169,13 +175,19 @@
 
 <style scoped>
 .resume {
+  opacity: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   max-width: 1520px;
   padding: 0 40px 64px 40px;
+  transition: opacity 0.3s ease-in-out;
   /* border: thick double var(--color-text-green) */
+}
+
+.fade-in {
+  opacity: 1;
 }
 
 .resume-header {
