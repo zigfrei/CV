@@ -6,9 +6,9 @@ import { getLocalStorageItem } from '@/utilities/helpers/browser';
 export const ANIMATION_SHOWN = 'animation-shown';
 
 export const useMainStore = defineStore('main', () => {
-    const showMatrix = ref(true);
+    const showMatrix = ref(false);
     const showLoading = ref(false);
-    const showMainPage = ref(false);
+    const showMainPage = ref(true);
     const wasAnimationShown = ref('');
     // const successMessage = ref("");
     // const isSubmitPending = ref(false); 
@@ -39,6 +39,10 @@ export const useMainStore = defineStore('main', () => {
       showMatrix.value = false;
       showLoading.value = false;
       showMainPage.value = true;
+    } else {
+      showMatrix.value = true;
+      showLoading.value = false;
+      showMainPage.value = false;
     }
   });
 

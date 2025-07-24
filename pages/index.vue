@@ -33,10 +33,7 @@ const mainStore = useMainStore();
 
 <template>
   <div class="main-content">
-    <transition name="fade" mode="out-in">
-      <main-matrix v-if="mainStore.showMatrix" />
-      <main-loading v-else-if="mainStore.showLoading" />
-    </transition>
+    <main-splash />
     <main-page v-if="mainStore.showMainPage" />
   </div>
 </template>
