@@ -55,4 +55,5 @@ export default defineNuxtConfig({
       },
     }),
   },
+  plugins: [{ src: '~/plugins/yaMetrica.ts', mode: 'client' }],
 });
