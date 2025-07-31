@@ -7,19 +7,19 @@ const hideHeaderFooter = computed(() => {
   return mainStore.showMatrix || mainStore.showLoading;
 });
 
-useHead({
-  link: [
-  { rel: "icon", type: "image/png", sizes: "120x120", href: "/favicon-120x120.png" },
-  { rel: "icon", type: "image/png", sizes: "96x96", href: "/favicon-96x96.png" },
-  { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-  { rel: "shortcut icon", href: "/favicon.ico" },
-  { rel: "apple-touch-icon", sizes:"180x180", href: "/apple-touch-icon.png" },
-  { rel: "manifest", href: "/site.webmanifest" }, 
-  ],
-  meta: [
-    { name: "yandex-verification", content: "fca727eaa2be41f5" },
-  ]
-});
+// useHead({
+//   link: [
+//   { rel: "icon", type: "image/png", sizes: "120x120", href: "/favicon-120x120.png" },
+//   { rel: "icon", type: "image/png", sizes: "96x96", href: "/favicon-96x96.png" },
+//   { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+//   { rel: "shortcut icon", href: "/favicon.ico" },
+//   { rel: "apple-touch-icon", sizes:"180x180", href: "/apple-touch-icon.png" },
+//   { rel: "manifest", href: "/site.webmanifest" }, 
+//   ],
+//   meta: [
+//     { name: "yandex-verification", content: "fca727eaa2be41f5" },
+//   ]
+// });
 </script>
 
 <template>
