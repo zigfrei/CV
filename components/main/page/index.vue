@@ -191,6 +191,9 @@ onMounted(() => {
       <main-faq />
     </div>
   </section>
+  <ClientOnly>
+    <main-chat />
+  </ClientOnly>
 </template>
 
 <style scoped>

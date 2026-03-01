@@ -2,4 +2,8 @@
   --layer-of-matrix-text: 2;
   --layer-of-header: 3;
   --top-layer: 10;
+  /* --layer-popup-backdrop: 999; */
+  --layer-popup: 1000;
+  /* 
+  --layer-localization-modal: 1001; */
   }
