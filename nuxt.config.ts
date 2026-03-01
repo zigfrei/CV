@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   runtimeConfig: {
   public: {
-    groqApiKey: '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',
+    groqApiKey: process.env.NUXT_PUBLIC_GROQ_API_KEY,
   },
 },
   app: {
