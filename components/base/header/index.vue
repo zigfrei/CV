@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useMainStore } from '@/stores/main.store';
+
+const mainStore = useMainStore();
+
+
+</script>
 
 <template>
   <header class="header">
@@ -15,7 +21,7 @@
       <nuxt-link to="#" class="main-link font-b4"> > DEMO </nuxt-link>
       <nuxt-link to="#" class="main-link font-b4"> > ROOT </nuxt-link>
       <nuxt-link to="#" class="main-link font-b4"> > EXAMPLE </nuxt-link>
-      <nuxt-link to="#" class="main-link font-b4"> > LOCALE </nuxt-link>
+      <button class="button-link font-b4" @click="mainStore.toggleShowLocalizationModal"> > LOCALE </button>
     </nav>
   </header>
 </template>
@@ -58,6 +64,21 @@
 }
 
 .main-link:hover {
+  color: var(--color-lemon);
+}
+
+.button-link {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-text-green);
+  transition: color 0.3s ease;
+  text-decoration: none;
+  text-shadow: var(--text-shadow-parametrs);
+}
+
+.button-link:hover {
   color: var(--color-lemon);
 }
 

@@ -4,6 +4,11 @@ import { definePerson } from 'nuxt-schema-org/schema';
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
+  runtimeConfig: {
+  public: {
+    groqApiKey: process.env.NUXT_PUBLIC_GROQ_API_KEY,
+  },
+},
   app: {
     head: {
       link: [
@@ -70,4 +75,12 @@ export default defineNuxtConfig({
     }),
   },
   plugins: [{ src: '~/plugins/yaMetrica.ts', mode: 'client' }],
+  vite: {
+  optimizeDeps: {
+    exclude: ['@huggingface/transformers'],
+  },
+  worker: {
+    format: 'es',
+  },
+},
 });

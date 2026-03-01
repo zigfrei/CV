@@ -10,6 +10,8 @@ export const useMainStore = defineStore('main', () => {
     const showLoading = ref(false);
     const showMainPage = ref(true);
     const wasAnimationShown = ref('');
+
+    const showLocalizationModal = ref(false);
     // const successMessage = ref("");
     // const isSubmitPending = ref(false); 
 
@@ -46,11 +48,16 @@ export const useMainStore = defineStore('main', () => {
     }
   });
 
+  function toggleShowLocalizationModal() {
+    showLocalizationModal.value = !showLocalizationModal.value;
+  }
 
   return {
     showMatrix,
     showLoading,
     showMainPage,
+    showLocalizationModal,
+    toggleShowLocalizationModal,
     // successMessage,
     // isSubmitPending,
     // sendFeedback,
