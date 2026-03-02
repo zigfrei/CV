@@ -34,7 +34,7 @@ watch(
   <div class="chat-wrapper">
     <button class="chat-toggle" :class="{ 'chat-toggle--open': isOpen }" @click="isOpen = !isOpen">
       <span class="chat-toggle__icon">{{ isOpen ? '✕' : '?' }}</span>
-      <span class="chat-toggle__label">{{ isOpen ? 'close' : 'ask me' }}</span>
+      <span class="chat-toggle__label">{{ isOpen ? 'Закрыть' : 'Спроси меня' }}</span>
     </button>
 
     <Transition name="chat">
@@ -74,7 +74,7 @@ watch(
           <span class="chat-input-row__prompt font-b4">>&nbsp;</span>
           <textarea
             v-model="inputText"
-            class="chat-input font-b4"
+            class="chat-input"
             placeholder="Введите вопрос..."
             rows="1"
             :disabled="isThinking || isEmbeddingLoading"
@@ -96,7 +96,7 @@ watch(
 <style scoped>
 .chat-wrapper {
   position: fixed;
-  bottom: 32px;
+  bottom: 50px;
   right: 32px;
   z-index: 1000;
   display: flex;
@@ -110,7 +110,8 @@ watch(
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
   border: 1px solid var(--color-text-green);
   color: var(--color-text-green);
   cursor: pointer;
@@ -135,7 +136,7 @@ watch(
 }
 
 .chat-toggle__label {
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.1em;
   text-transform: lowercase;
 }
@@ -166,7 +167,7 @@ watch(
 
 .chat-header__hint {
   color: rgba(203, 251, 131, 0.4);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .chat-loading {
@@ -179,7 +180,7 @@ watch(
 
 .chat-loading__text {
   color: var(--color-pure-lamp);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .chat-loading__bar {
@@ -264,7 +265,7 @@ watch(
   outline: none;
   color: var(--color-pure-lamp);
   font-family: inherit;
-  font-size: 12px;
+  font-size: 16px;
   resize: none;
   line-height: 1.5;
   caret-color: var(--color-text-green);

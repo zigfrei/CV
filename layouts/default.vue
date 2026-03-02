@@ -16,17 +16,14 @@ const hideHeaderFooter = computed(() => {
     </div>
     <!-- <base-footer /> -->
 
-
-
-
-
-
-     <!-- <base-modal v-if="mainStore.showLocalizationModal" @close="mainStore.toggleShowLocalizationModal" :showPopup="mainStore.showLocalizationModal">
+    <!-- <base-modal v-if="mainStore.showLocalizationModal" @close="mainStore.toggleShowLocalizationModal" :showPopup="mainStore.showLocalizationModal">
        <button>sdsds</button>
      </base-modal> -->
   </div>
-      <base-modal-locale>
-  </base-modal-locale>
+  <ClientOnly>
+    <main-chat />
+  </ClientOnly>
+  <base-modal-locale> </base-modal-locale>
 </template>
 
 <style scoped>
@@ -52,14 +49,17 @@ const hideHeaderFooter = computed(() => {
   height: 100%; /* Covers the content-wrapper */
   box-shadow: var(--main-box-shadow-view);
   z-index: 1; /* Ensure it's above .content's default plane but below any interactive UI on top of the effect */
-  background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.21) 0),
+  background:
+    linear-gradient(transparent 50%, rgba(0, 0, 0, 0.21) 0),
     linear-gradient(
       90deg,
       rgba(255, 0, 0, 0.055),
       rgba(0, 255, 0, 0.03),
       rgba(0, 0, 255, 0.055)
     );
-  background-size: 100% 0.2142857143rem, 0.2857142857rem 100%;
+  background-size:
+    100% 0.2142857143rem,
+    0.2857142857rem 100%;
   pointer-events: none; /* Crucial: makes the overlay non-interactive */
 }
 
