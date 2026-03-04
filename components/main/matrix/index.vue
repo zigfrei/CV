@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useMainStore } from '@/stores/main.store';
 
+const { t } = useI18n();
 const mainStore = useMainStore();
 const canvas = ref<HTMLCanvasElement | null>(null);
 let ctx: CanvasRenderingContext2D | null = null;
@@ -87,8 +88,8 @@ const handlePressAnyKey = () => {
       <div class="overlay" @click="handlePressAnyKey">
         <transition name="fade" mode="out-in">
           <div v-if="showHelper" class="titleWrapper">
-            <h1 class="title">Добро пожаловать.</h1>
-            <h2 class="subTitle">Для продолжения нажмите любую клавишу ...</h2>
+            <h1 class="title">{{ t('matrix.line1') }}</h1>
+            <h2 class="subTitle">{{ t('matrix.line2') }}</h2>
           </div>
         </transition>
       </div>

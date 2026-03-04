@@ -1,14 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { t } = useI18n();
+</script>
 
 <template>
   <aside class="resume-aside">
     <div class="contats">
-      <base-title>Контакты</base-title>
+      <base-title>{{ t('aside.contacts') }}</base-title>
       <ul class="contact-list">
         <li class="contact-item">
           <icon size="32px" name="icons:mail" class="hover-scale-light" />
           <div class="contact-item-text">
-            <p class="contact-item-title font-b4">Электронная почта</p>
+            <p class="contact-item-title font-b4">{{ t('aside.email') }}</p>
             <nuxt-link
               to="mailto:georgyrevazashvili@yandex.ru"
               class="contact-item-link font-b5"
@@ -25,7 +27,7 @@
             ><icon size="32px" name="icons:telegram" class="hover-scale-light"
           /></nuxt-link>
           <div class="contact-item-text">
-            <p class="contact-item-title font-b4">Телеграм</p>
+            <p class="contact-item-title font-b4">{{ t('aside.telegram') }}</p>
             <nuxt-link
               to="https://t.me/georrg55"
               target="_blank"
@@ -73,27 +75,27 @@
       </ul>
     </div>
 
-      <base-title>Навыки</base-title>
+      <base-title>{{ t('aside.skills') }}</base-title>
       <div class="skills">
-        <p class="paragraf-title font-b3">Знание языков</p>
-        <p class="paragraf-text font-b4">Русский - родной</p>
+        <p class="paragraf-title font-b3">{{ t('aside.language_knowledge') }}</p>
+        <p class="paragraf-text font-b4">{{ t('aside.russian_native') }}</p>
         <p class="paragraf-text font-b4">
-          Английский - B2 - Upper Intermediate
+          {{ t('aside.english_b2') }}
         </p>
       </div>
       <div class="skills">
-        <p class="paragraf-title font-b3">Программирование</p>
+        <p class="paragraf-title font-b3">{{ t('aside.programming') }}</p>
         <p class="paragraf-text font-b4">
-          <span class="paragraf-text-main">Основные:</span> HTML, CSS,
-          JavaScript, TypeScript, Vue3, Nuxt3, Vuetify, Git, SEO оптимизация,
-          верстка писем HTML, Progressive Web App, CSS анимации
+          <span class="paragraf-text-main">{{ t('aside.main_skills') }}:</span> HTML, CSS,
+          JavaScript, TypeScript, Vue3, Nuxt3, Vuetify, Git, {{ t('aside.SEO_optimization') }},
+          {{ t('aside.email_layout') }}, Progressive Web App, {{ t('aside.css_animations') }}
         </p>
         <p class="paragraf-text font-b4">
-          <span class="paragraf-text-main">Знаком с:</span> React.js, Next.js,
+          <span class="paragraf-text-main">{{ t('aside.familiar_with') }}:</span> React.js, Next.js,
           Redux Toolkit, Node.js (NestJS), jQuery, Jest, Storybook, Wordpress
         </p>
       </div>
-      <base-title>Хобби</base-title>
+      <base-title>{{ t('aside.hobbies') }}</base-title>
       <div class="hobby">
         <icon size="48px" name="icons:gym-icon" />
         <icon size="48px" name="icons:game-icon" />
