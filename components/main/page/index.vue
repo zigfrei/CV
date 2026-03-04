@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const show = ref(false);
 
+const { t } = useI18n();
+
 onMounted(() => {
   show.value = true;
 });
@@ -17,19 +19,19 @@ onMounted(() => {
         class="avatar-image"
       />
       <div class="header-text">
-        <h1 class="font-h1 header-title">Георгий<br >Ревазашвили</h1>
-        <p class="header-subtitle font-b1">Frontend-разработчик</p>
+        <h1 class="font-h1 header-title">{{ t('main.name') }}<br >{{ t('main.surname') }}</h1>
+        <p class="header-subtitle font-b1">{{ t('main.position') }}</p>
       </div>
     </div>
     <div class="resume-content">
       <main-page-aside />
       <div class="resume-main">
         <div class="resume-main-block">
-          <base-title>Опыт работы</base-title>
-          <p class="paragraf-title font-b3">Коммерческий опыт</p>
+          <base-title>{{ t('main.experience') }}</base-title>
+          <p class="paragraf-title font-b3">{{ t('main.commercial_experience') }}</p>
           <div class="paragraf-grid">
             <p class="paragraf-text paragraf-text-subtitle font-b4">
-              Апрель 2024 — настоящее время
+              {{ t('main.april_2024_to_present') }}
             </p>
             <div class="paragraf-grid-main">
               <nuxt-link
@@ -38,28 +40,25 @@ onMounted(() => {
                 class="paragraf-link font-b4"
                 >SwitchCase</nuxt-link
               >
-              <p class="paragraf-text font-b4">Фронтенд разработчик</p>
+              <p class="paragraf-text font-b4">{{ t('main.frontend_developer') }}</p>
               <p class="paragraf-text font-b4">
-                Разработка адаптивных пользовательских интерфейсов: landing
-                pages (сложная анимация: GSAP, Lottie, CSS), веб-приложения
-                (админ-панели), UI-киты, SEO. Интеграция с бэкендом (REST API).
+                {{ t('main.responsibilities') }}
               </p>
             </div>
           </div>
 
           <div class="paragraf-grid">
             <p class="paragraf-text paragraf-text-subtitle font-b4">
-              Сентябрь 2023 — Апрель 2024
+              {{ t('main.september_2023_to_april_2024') }}
             </p>
             <div class="paragraf-grid-main">
-              <p class="paragraf-text font-b4">Частная практика — фриланс</p>
-              <p class="paragraf-text font-b4">Фронтенд разработчик</p>
+              <p class="paragraf-text font-b4">{{ t('main.private_practice_freelance') }}</p>
+              <p class="paragraf-text font-b4">{{ t('main.frontend_developer') }}</p>
               <p class="paragraf-text font-b4">
-                Next.js - разработка лендинга с галереей, формой обратной связи,
-                адаптив, SEO.
+                {{ t('main.nextjs_landing_responsibility') }}
               </p>
               <p class="paragraf-text font-b4">
-                Разработка темы на Wordpress + Cart js.
+                {{ t('main.wordpress_theme_cartjs') }}
               </p>
               <p class="paragraf-text font-b4">
                 HTML+CSS+JS:
@@ -75,13 +74,13 @@ onMounted(() => {
 
           <div class="paragraf-grid">
             <p class="paragraf-text paragraf-text-subtitle font-b4">
-              Сентябрь 2023 — Апрель 2024
+              {{ t('main.september_2023_to_april_2024') }}
             </p>
             <div class="paragraf-grid-main">
-              <p class="paragraf-text font-b4">Неоплачиваемая стажировка</p>
-              <p class="paragraf-text font-b4">Фронтенд разработчик</p>
+              <p class="paragraf-text font-b4">{{ t('main.internship_unpaid') }}</p>
+              <p class="paragraf-text font-b4">{{ t('main.frontend_developer') }}</p>
               <p class="paragraf-text font-b4">
-                Разработка сайта курсов
+                {{ t('main.course_website_development') }}
                 <nuxt-link
                   to="https://tesseramosaic.art/"
                   target="_blank"
@@ -92,94 +91,82 @@ onMounted(() => {
             </div>
           </div>
 
-          <p class="paragraf-title font-b3">Учебный опыт</p>
+          <p class="paragraf-title font-b3">{{ t('main.learning_experience') }}</p>
           <div class="paragraf-grid">
             <p class="paragraf-text paragraf-text-subtitle font-b4">
-              Май 2021 — Май 2023
+              {{ t('main.may_2021_to_may_2023') }}
             </p>
             <div class="paragraf-grid-main">
               <p class="paragraf-text font-b4">
-                Фронтенд / фулстек разработчик
+                {{ t('main.frontend_fullstack_developer') }}
               </p>
               <p class="paragraf-text font-b4">
-                В рамках обучения делались проекты с функционалом:
+                {{ t('main.learning_projects_intro') }}
               </p>
               <p class="paragraf-text font-b5">
-                1. Взаимодействие с API бэкэнда -добавление удаление фотаграфий,
-                адаптивная верстка. Написание кода на Vanila JS c использование
-                классов. Технологии: JavaScript, HTML, CSS, Webpack, БЭМ, работа
-                с напарником - VSCode Live Share.
+                {{ t('main.learning_project_1') }}
               </p>
 
               <p class="paragraf-text font-b5">
-                2. SPA, Drag & Drop, авторизация/регистрпация пользователя,
-                клиентский роутинг с редиректом, добавление/удаление заказов,
-                история заказов. Технологии: React, Redux, React DND, WebSocket,
-                TypeScript.
+                {{ t('main.learning_project_2') }}
               </p>
 
               <p class="paragraf-text font-b5">
-                3. Unit-тестирование, E2E тестирование с использованием Cypress,
-                изучение алгоритмов и структур данных на практике. Технологии:
-                React js, TypeScript, Jest, Cypress, yarn
+                {{ t('main.learning_project_3') }}
               </p>
 
               <p class="paragraf-text font-b5">
-                4. Фулстэкпроект - бэкэнд на виртуальном серваке (Яндекс Облако)
-                Node.js(Nest), Nginx, сборка pm2. Проект на докер образах - их
-                взаимодействие друг с другом через Docker Compose. Https -
-                certbot. Фронтенд на React.js, Redux Toolkit, TypeScript.
+                {{ t('main.learning_project_4') }}
               </p>
             </div>
           </div>
 
-          <p class="paragraf-title font-b3">Нерелевантный опыт</p>
+          <p class="paragraf-title font-b3">{{ t('main.non_relevant_experience') }}</p>
           <div class="paragraf-grid">
             <p class="paragraf-text paragraf-text-subtitle font-b4">
-              Август 2011 — Август 2023
+              {{ t('main.august_2011_to_august_2023') }}
             </p>
             <div class="paragraf-grid-main">
-              <p class="paragraf-text font-b4">ОАО «Гродно Азот»</p>
-              <p class="paragraf-text font-b5">Ведущий инженер-технолог</p>
+              <p class="paragraf-text font-b4">{{ t('main.grodno_azot') }}</p>
+              <p class="paragraf-text font-b5">{{ t('main.leading_process_engineer') }}</p>
               <p class="paragraf-text font-b5">
-                12 лет в химической промышленности - производство серной кислоты
-                / олеума
+                {{ t('main.chemical_industry_12_years') }}
               </p>
               <p class="paragraf-text font-b5">
-                Аппаратчик > Начальник смены > Ведущий инженер-технолог
+                {{ t('main.career_progression') }}
               </p>
             </div>
           </div>
         </div>
 
         <div class="resume-main-block">
-          <base-title>Образование</base-title>
+          <base-title>{{ t('main.education') }}</base-title>
           <p class="paragraf-title font-b3">
-            Дополнительное профессиональное образование, курсы
+            {{ t('main.additional_professional_education_courses') }}
           </p>
           <div class="paragraf-grid">
-            <p class="paragraf-text font-b4">2021-2023</p>
+            <p class="paragraf-text font-b4">{{ t('main.education_2021_2023') }}</p>
             <div class="paragraf-grid-main">
               <p class="paragraf-text font-b4">
-                Фронтенд / фулстек разработчик
+                {{ t('main.frontend_fullstack_developer') }}
               </p>
               <p class="paragraf-text font-b5">
-                Название программы курса: "Веб-разработчик плюс"
+                {{ t('main.course_program_name') }}
               </p>
-              <p class="paragraf-text font-b5">Яндекс Практикум</p>
+              <p class="paragraf-text font-b5">{{ t('main.yandex_practicum') }}</p>
             </div>
           </div>
 
-          <p class="paragraf-title font-b3">Высшее образование</p>
+          <p class="paragraf-title font-b3">{{ t('main.higher_education') }}</p>
           <div class="paragraf-grid">
-            <p class="paragraf-text font-b4">2006-2011</p>
+            <p class="paragraf-text font-b4">{{ t('main.education_2006_2011') }}</p>
             <div class="paragraf-grid-main">
-              <p class="paragraf-text font-b4">Химик, инженер-технолог</p>
+              <p class="paragraf-text font-b4">{{ t('main.chemist_process_engineer') }}</p>
               <p class="paragraf-text font-b5">
-                Специализация: "Основной органический и нефтехимический синтез"
+                {{ t('main.specialization_org_petchem_synthesis') }}
               </p>
               <p class="paragraf-text font-b5">
-                Белорусский государственный технологический университет
+                {{ t('main.belarus_state_tech_university') }}
               </p>
             </div>
           </div>
@@ -187,7 +174,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="faq-content">
-      <base-title>Часто задаваемые вопросы</base-title>
+      <base-title>{{ t('main.faq_title') }}</base-title>
       <main-faq />
     </div>
   </section>

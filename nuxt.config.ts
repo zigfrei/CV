@@ -24,16 +24,7 @@ export default defineNuxtConfig({
   ]
     },
   },
-  modules: [
-    'nuxt-schema-org',
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/icon',
-    '@nuxt/image',
-    '@pinia/nuxt',
-    '@nuxtjs/seo',
-    '@nuxtjs/sitemap',
-  ],
+  modules: ['nuxt-schema-org', '@nuxt/eslint', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@pinia/nuxt', '@nuxtjs/seo', '@nuxtjs/sitemap', '@nuxtjs/i18n'],
   css: ['~/assets/styles/main.css'],
   icon: {
     customCollections: [
@@ -42,6 +33,14 @@ export default defineNuxtConfig({
         dir: './assets/icons',
       },
     ],
+  },
+  i18n: {
+    langDir: 'locales',
+    locales: [
+      { code: 'en', language: 'en-US', file: 'en.json' },
+      { code: 'ru', language: 'ru-RU', file: 'ru.json' }
+    ],
+    defaultLocale: 'en',
   },
   schemaOrg: {
     identity: definePerson({

@@ -2,6 +2,7 @@
 import { useMainStore } from '@/stores/main.store';
 import { ANIMATION_SHOWN } from '@/stores/main.store';
 
+const { t } = useI18n();
 const mainStore = useMainStore();
 const lineText = ref('');
 const show = ref(-1);
@@ -32,15 +33,15 @@ const handleInteraction = () => {
 };
 
 const textArray = [
-  'Loading ...',
-  'Rendering a web page ...',
-  'Start to parse the HTML ...',
-  'Fetch external resources ...',
-  'Parse the CSS and build the CSSOM ...',
-  'Execute the JavaScript ...',
-  'Merge DOM and CSSOM to construct the render tree ...',
-  'Calculate layout and paint ...',
-  'Done',
+  t('loading.line1'),
+  t('loading.line2'),
+  t('loading.line3'),
+  t('loading.line4'),
+  t('loading.line5'),
+  t('loading.line6'),
+  t('loading.line7'),
+  t('loading.line8'),
+  t('loading.line9'),
   '>',
 ];
 
@@ -48,9 +49,13 @@ onMounted(() => {
   show.value++;
   typingIntervalId = setInterval(() => {
     if (lineNumber.value < textArray.length - 1) {
-      if (charIndex.value < textArray[lineNumber.value].length && !stopTyping.value) {
-        lineText.value =
-          lineText.value + textArray[lineNumber.value][charIndex.value];
+      const currentLine = textArray[lineNumber.value];
+      if (!currentLine) {
+        return;
+      }
+
+      if (charIndex.value < currentLine.length && !stopTyping.value) {
+        lineText.value = lineText.value + currentLine.charAt(charIndex.value);
         charIndex.value++;
       } else {
         setTimeout(() => {
@@ -74,9 +79,13 @@ watch(show, (newValue) => {
   if (newValue > 0 && newValue < textArray.length) {
     typingIntervalId = setInterval(() => {
       if (lineNumber.value < textArray.length) {
-        if (charIndex.value < textArray[lineNumber.value].length && !stopTyping.value) {
-          lineText.value =
-            lineText.value + textArray[lineNumber.value][charIndex.value];
+        const currentLine = textArray[lineNumber.value];
+        if (!currentLine) {
+          return;
+        }
+
+        if (charIndex.value < currentLine.length && !stopTyping.value) {
+          lineText.value = lineText.value + currentLine.charAt(charIndex.value);
           charIndex.value++;
         } else {
           setTimeout(() => {
