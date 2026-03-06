@@ -78,5 +78,20 @@
         "answer2": "I enjoy building dynamic landing pages with thoughtful animations to improve user engagement and conversion. I develop interactive user interfaces with a user-first approach. Frontend SEO optimization includes semantic markup, dynamic meta tags, structured data, and page speed improvements.",
         "question3": "What technologies and tools make up your core stack?",
         "answer3": "My core stack includes Vue.js, the Nuxt meta-framework, and also React (Next.js)."
+    },
+    "popups": {
+        "locale": {
+            "rus": "Russian",
+            "eng": "English"
+        },
+        "ai": {
+            "close": "Close",
+            "ask": "Ask me",
+            "title": "AI Chat",
+            "subtitle": "based on documents",
+            "progress": "Loading model...",
+            "disclaimer": "Ask a question about my experience, projects, or skills",
+            "placeholder": "Enter your question..."
+        }
     }
 }

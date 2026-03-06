@@ -18,9 +18,9 @@ const mainStore = useMainStore();
       />
     </nuxt-link>
     <nav class="main">
-      <nuxt-link to="#" class="main-link font-b4"> > DEMO </nuxt-link>
+      <!-- <nuxt-link to="#" class="main-link font-b4"> > DEMO </nuxt-link>
       <nuxt-link to="#" class="main-link font-b4"> > ROOT </nuxt-link>
-      <nuxt-link to="#" class="main-link font-b4"> > EXAMPLE </nuxt-link>
+      <nuxt-link to="#" class="main-link font-b4"> > EXAMPLE </nuxt-link> -->
       <button class="button-link font-b4" @click="mainStore.toggleShowLocalizationModal"> > LOCALE </button>
     </nav>
   </header>
