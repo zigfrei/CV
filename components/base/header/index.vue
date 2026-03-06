@@ -56,7 +56,7 @@ const currentLocale = computed(() => {
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px 40px;
-  max-width: 1920px;
+  max-width: 1520px;
   gap: 32px;
 }
 
