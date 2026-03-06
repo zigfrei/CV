@@ -33,9 +33,8 @@ const mainStore = useMainStore();
 
 <template>
   <div class="main-content">
-    <!-- <main-splash />
-    <main-page v-if="mainStore.showMainPage" /> -->
-    <main-page />
+    <main-splash />
+    <main-page v-if="mainStore.showMainPage" />
   </div>
 </template>
 
