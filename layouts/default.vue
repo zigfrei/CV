@@ -10,8 +10,7 @@ const hideHeaderFooter = computed(() => {
 
 <template>
   <div class="content-wrapper">
-    <!-- <base-header v-if="!hideHeaderFooter" /> -->
-    <base-header />
+    <base-header v-if="!hideHeaderFooter" />
     <div class="content">
       <slot />
     </div>
