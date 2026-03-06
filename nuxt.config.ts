@@ -35,12 +35,18 @@ export default defineNuxtConfig({
     ],
   },
   i18n: {
-    langDir: 'locales',
     locales: [
       { code: 'en', language: 'en-US', file: 'en.json' },
       { code: 'ru', language: 'ru-RU', file: 'ru.json' }
     ],
-    defaultLocale: 'en',
+    strategy: 'no_prefix',
+    langDir: 'locales',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      alwaysRedirect: true,
+      fallbackLocale: 'en',
+    },
   },
   schemaOrg: {
     identity: definePerson({
