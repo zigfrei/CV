@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { messages, sendMessage, isThinking, isEmbeddingLoading, progress } = useChat()
-
+const { t } = useI18n();
 const isOpen = ref(false)
 const inputText = ref('')
 const messagesEl = ref<HTMLElement | null>(null)
@@ -34,18 +34,18 @@ watch(
   <div class="chat-wrapper">
     <button class="chat-toggle" :class="{ 'chat-toggle--open': isOpen }" @click="isOpen = !isOpen">
       <span class="chat-toggle__icon">{{ isOpen ? '✕' : '?' }}</span>
-      <span class="chat-toggle__label">{{ isOpen ? 'Закрыть' : 'Спроси меня' }}</span>
+      <span class="chat-toggle__label">{{ isOpen ? t('popups.ai.close') : t('popups.ai.ask') }}</span>
     </button>
 
     <Transition name="chat">
       <div v-if="isOpen" class="chat-panel">
         <div class="chat-header">
-          <span class="chat-header__title font-b4">// AI chat</span>
-          <span class="chat-header__hint font-b4">на основе документов</span>
+          <span class="chat-header__title font-b4">// {{ t('popups.ai.title') }}</span>
+          <span class="chat-header__hint font-b4">{{ t('popups.ai.subtitle') }}</span>
         </div>
 
         <div v-if="isEmbeddingLoading" class="chat-loading">
-          <span class="chat-loading__text font-b4">Загрузка модели... {{ progress }}%</span>
+          <span class="chat-loading__text font-b4">{{ t('popups.ai.progress') }} {{ progress }}%</span>
           <div class="chat-loading__bar">
             <div class="chat-loading__fill" :style="{ width: `${progress}%` }" />
           </div>
@@ -53,7 +53,7 @@ watch(
 
         <div ref="messagesEl" class="chat-messages">
           <div v-if="messages.length === 0" class="chat-empty">
-            <p class="font-b4">Задайте вопрос о моём опыте, проектах или навыках</p>
+            <p class="font-b4">{{ t('popups.ai.disclaimer') }}</p>
           </div>
           <div
             v-for="(msg, i) in messages"
@@ -75,7 +75,7 @@ watch(
           <textarea
             v-model="inputText"
             class="chat-input"
-            placeholder="Введите вопрос..."
+            :placeholder="t('popups.ai.placeholder')"
             rows="1"
             :disabled="isThinking || isEmbeddingLoading"
             @keydown="handleKeydown"

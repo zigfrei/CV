@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { useMainStore } from '@/stores/main.store';
-
+const { t, setLocale } = useI18n();
 const mainStore = useMainStore();
 
-
+const onLocaleChange = (locale: 'ru' | 'en') => {
+  setLocale(locale);
+  mainStore.toggleShowLocalizationModal();
+};  
 </script>
 <template>
 <div class="modal">
@@ -17,10 +20,8 @@ const mainStore = useMainStore();
       v-if="mainStore.showLocalizationModal"
       class="modal-content"
     >
-      <button class="button font-b4">
-          Русский</button>
-      <button class="button font-b4">
-        English</button>
+      <button class="button font-b4" @click="onLocaleChange('ru')">{{ t('popups.locale.rus') }}</button>
+      <button class="button font-b4" @click="onLocaleChange('en')">{{ t('popups.locale.eng') }}</button>
     </div>
   </transition>
 </div> 
