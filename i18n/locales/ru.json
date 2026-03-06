@@ -23,7 +23,7 @@
         "april_2024_to_present": "Апрель 2024 — настоящее время",
         "frontend_developer": "Фронтенд разработчик",
         "responsibilities": "Разработка адаптивных пользовательских интерфейсов: landing pages (сложная анимация: GSAP, Lottie, CSS), веб-приложения (админ-панели), UI-киты, SEO. Интеграция с бэкендом (REST API).",
-        "september_2023_to_april_2024": "Сентябрь 2023 — Апрель 2024",
+        "september_2023_to_april_2024": "Сентябрь 2022 — Апрель 2024",
         "private_practice_freelance": "Частная практика — фриланс",
         "nextjs_landing_responsibility": "Next.js - разработка лендинга с галереей, формой обратной связи, адаптив, SEO.",
         "wordpress_theme_cartjs": "Разработка темы на Wordpress + Cart js.",
@@ -93,5 +93,8 @@
             "disclaimer": "Задайте вопрос о моём опыте, проектах или навыках",
             "placeholder": "Введите вопрос..."
         }
-    }
+    },
+    "header": {
+         "lang": "Язык"
+        }
 }

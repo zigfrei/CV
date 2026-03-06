@@ -23,7 +23,7 @@
         "april_2024_to_present": "April 2024 — Present",
         "frontend_developer": "Frontend Developer",
         "responsibilities": "Developed responsive user interfaces: landing pages (advanced animation: GSAP, Lottie, CSS), web applications (admin panels), UI kits, and SEO. Integrated with the backend (REST API).",
-        "september_2023_to_april_2024": "September 2023 — April 2024",
+        "september_2023_to_april_2024": "September 2022 — April 2024",
         "private_practice_freelance": "Private practice — freelance",
         "nextjs_landing_responsibility": "Next.js — development of a landing page with a gallery, contact form, responsive layout, and SEO.",
         "wordpress_theme_cartjs": "WordPress theme development + Cart.js.",
@@ -93,5 +93,8 @@
             "disclaimer": "Ask a question about my experience, projects, or skills",
             "placeholder": "Enter your question..."
         }
-    }
+    },
+    "header": {
+         "lang": "Language"
+        }
 }
