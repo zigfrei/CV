@@ -1,5 +1,6 @@
 export function useGroq() {
   const config = useRuntimeConfig()
+  const { t } = useI18n()
 
   async function* streamAnswer(question: string, chunks: { text: string; source: string }[]) {
     const context = chunks.map((c, i) => `[${i + 1}] (${c.source})\n${c.text}`).join('\n\n')
@@ -16,12 +17,7 @@ export function useGroq() {
         messages: [
           {
             role: 'system',
-            content: `You are a career assistant. Answer questions based strictly on the provided context.
-            Rules:
-            - Be concise and factual
-            - If information is not in the context, say: "I don't have this information — feel free to reach out directly for clarification."
-            - Do not over-praise or embellish
-            Context:
+            content: `${t('groq.system_prompt')}\n\n
             ${context}`,
           },
           { role: 'user', content: question },
