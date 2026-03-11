@@ -74,7 +74,7 @@ onMounted(() => {
 
           <div class="paragraf-grid">
             <p class="paragraf-text paragraf-text-subtitle font-b4">
-              {{ t('main.september_2023_to_april_2024') }}
+              {{ t('main.september_2023_to_march_2024') }}
             </p>
             <div class="paragraf-grid-main">
               <p class="paragraf-text font-b4">{{ t('main.internship_unpaid') }}</p>
