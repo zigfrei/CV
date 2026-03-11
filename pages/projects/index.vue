@@ -4,10 +4,10 @@ import { useMainStore } from '@/stores/main.store';
 const { t } = useI18n();
 
 useSeoMeta({
-  title: t('opengraph.title'),
-  description: t('opengraph.description'),
-  ogTitle: t('opengraph.title'),
-  ogDescription:t('opengraph.description'),
+  title: t('opengraph.projectsTitle'),
+  description: t('opengraph.projectsDescription'),
+  ogTitle: t('opengraph.projectsTitle'),
+  ogDescription:t('opengraph.projectsDescription'),
   ogImageAlt: t('opengraph.imageAlt'),
   ogImageHeight: '630',
   ogImageWidth: '1200',
@@ -31,8 +31,7 @@ const mainStore = useMainStore();
 
 <template>
   <div class="main-content">
-    <main-splash />
-    <main-page v-if="mainStore.showMainPage" />
+    <projects-page />
   </div>
 </template>
 

@@ -26,6 +26,11 @@ const currentLocale = computed(() => {
       <nuxt-link to="#" class="main-link font-b4"> > ROOT </nuxt-link>
       <nuxt-link to="#" class="main-link font-b4"> > EXAMPLE </nuxt-link> -->
       <nuxt-link
+        to="/projects"
+        class="main-link font-b4"
+        >> {{ t('projects.title') }}</nuxt-link
+      >
+      <nuxt-link
         v-if="locale === 'en'"
         target="_blank"
         to="/Revazashvili_Georgy_CV.pdf"

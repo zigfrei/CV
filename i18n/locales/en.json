@@ -99,5 +99,15 @@
     },
     "groq": {
         "system_prompt": "You are a career assistant. Answer questions based strictly on the provided context.\nRules:\n- Be concise and factual\n- If information is not in the context, say: \"I don't have this information — feel free to reach out directly for clarification.\"\n- Do not over-praise or embellish\nContext:"
+    },
+        "opengraph": {
+        "title": "Georgiy Revazashvili | Resume and Projects",
+        "description": "Good day! I am Georgiy Revazashvili, a frontend developer. Here you can find my professional resume, skills, and projects in web development.",
+        "imageAlt": "Georgiy Revazashvili",
+        "projectsTitle": "Projects",
+        "projectsDescription": "A list of projects I have participated in, with a description of the technologies used and functionality."
+    },
+    "projects": {
+        "title": "Projects"
     }
 }
