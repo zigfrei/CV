@@ -20,10 +20,10 @@
         "position": "Frontend-разработчик",
         "experience": "Опыт работы",
         "commercial_experience": "Коммерческий опыт",
-        "april_2024_to_present": "Апрель 2024 — настоящее время",
+        "april_2024_to_present": "Март 2024 — настоящее время",
         "frontend_developer": "Фронтенд разработчик",
         "responsibilities": "Разработка адаптивных пользовательских интерфейсов: landing pages (сложная анимация: GSAP, Lottie, CSS), веб-приложения (админ-панели), UI-киты, SEO. Интеграция с бэкендом (REST API).",
-        "september_2023_to_april_2024": "Сентябрь 2022 — Апрель 2024",
+        "september_2023_to_april_2024": "Август 2022 — Март 2024",
         "private_practice_freelance": "Частная практика — фриланс",
         "nextjs_landing_responsibility": "Next.js - разработка лендинга с галереей, формой обратной связи, адаптив, SEO.",
         "wordpress_theme_cartjs": "Разработка темы на Wordpress + Cart js.",
@@ -53,7 +53,8 @@
         "chemist_process_engineer": "Химик, инженер-технолог",
         "specialization_org_petchem_synthesis": "Специализация: \"Основной органический и нефтехимический синтез\"",
         "belarus_state_tech_university": "Белорусский государственный технологический университет",
-        "faq_title": "Часто задаваемые вопросы"
+        "faq_title": "Часто задаваемые вопросы",
+        "september_2023_to_march_2024": "Сеньтябрь 2023 — Март 2024"
     },
     "aside": {
         "contacts": "Контакты",
