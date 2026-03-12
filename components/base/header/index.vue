@@ -26,6 +26,11 @@ const currentLocale = computed(() => {
       <nuxt-link to="#" class="main-link font-b4"> > ROOT </nuxt-link>
       <nuxt-link to="#" class="main-link font-b4"> > EXAMPLE </nuxt-link> -->
       <nuxt-link
+        to="/projects"
+        class="main-link font-b4"
+        >> {{ t('projects.title') }}</nuxt-link
+      >
+      <nuxt-link
         v-if="locale === 'en'"
         target="_blank"
         to="/Revazashvili_Georgy_CV.pdf"
@@ -127,7 +132,7 @@ const currentLocale = computed(() => {
   max-width: 1920px;
   gap: 32px; */
     padding: 12px 16px;
-    gap: 12px;
+    gap: 4px;
   }
 
   .logo {
@@ -175,6 +180,7 @@ const currentLocale = computed(() => {
   align-items: center;
   justify-content: flex-end;
   gap: 32px; */
+  padding: 6px;
     gap: 16px;
     height: 52px;
   }

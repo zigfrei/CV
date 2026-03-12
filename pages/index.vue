@@ -1,26 +1,24 @@
 <script setup lang="ts">
 import { useMainStore } from '@/stores/main.store';
 
-useServerSeoMeta({
-  title:
-    'Ревазашвили Георгий | Резюме и Демки',
-  description:
-    'Доброго времени суток! Я Ревазашвили Георгий, фронтенд разработчик. Здесь вы можете ознакомиться с моим профессиональным резюме, навыками и проектами в области веб-разработки.',
-  ogTitle:
-    'Ревазашвили Георгий - Фронтенд разработчик | Резюме и Демки',
-  ogDescription:
-    'Доброго времени суток! Я Ревазашвили Георгий, фронтенд разработчик. Здесь вы можете ознакомиться с моим профессиональным резюме, навыками и проектами в области веб-разработки.',
-  ogImageAlt: 'Ревазашвили Георгий',
+const { t } = useI18n();
+
+useSeoMeta({
+  title: t('opengraph.title'),
+  description: t('opengraph.description'),
+  ogTitle: t('opengraph.title'),
+  ogDescription:t('opengraph.description'),
+  ogImageAlt: t('opengraph.imageAlt'),
   ogImageHeight: '630',
   ogImageWidth: '1200',
   ogImageType: 'image/png',
   ogImageUrl: `/og-image.png`,
   ogType: 'website',
-  ogUrl: 'https://example.com',
-  ogSiteName: 'Ревазашвили Георгий',
+  ogUrl: 'https://revaz.vercel.app/',
+  ogSiteName: t('opengraph.imageAlt'),
   twitterImage: {
     url: `/twitter-image.png`,
-    alt: 'Ревазашвили Георгий',
+    alt: t('opengraph.imageAlt'),
     type: 'image/png',
     width: 1200,
     height: 600,
