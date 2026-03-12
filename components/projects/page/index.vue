@@ -9,8 +9,8 @@ const { t } = useI18n();
     <div class="content">
       <div class="content-text">
         <p class="content-subtitle font-b5"> > root / projects</p>
-        <h1 class="font-h1 content-title">Проекты</h1>
-        <p class="content-subtitle font-b1">Коммерческие проекты, над которыми я работал или в которых принимал участие.</p>
+        <h1 class="font-h1 content-title">{{ t('projects.title') }}</h1>
+        <p class="content-subtitle font-b1">{{ t('projects.description') }}</p>
       </div>
       <div class="content-grid">
         <projects-card
@@ -84,7 +84,8 @@ const { t } = useI18n();
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 16px 0;
+    padding: 16px;
+    gap: 40px;
   }
 
   .avatar-image {
@@ -93,8 +94,9 @@ const { t } = useI18n();
   .content-text {
     padding: 0;
     gap: 12px;
-    text-align: center;
-    align-items: center;
+    border: none;
+    /* text-align: center; */
+    /* align-items: center; */
   }
 
   .content-title {
@@ -108,6 +110,7 @@ const { t } = useI18n();
   .content-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    padding: 0;
   }
 }
 

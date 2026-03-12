@@ -20,10 +20,10 @@
         "position": "Frontend Developer",
         "experience": "Work Experience",
         "commercial_experience": "Commercial Experience",
-        "april_2024_to_present": "April 2024 — Present",
+        "april_2024_to_present": "March 2024 — Present",
         "frontend_developer": "Frontend Developer",
         "responsibilities": "Developed responsive user interfaces: landing pages (advanced animation: GSAP, Lottie, CSS), web applications (admin panels), UI kits, and SEO. Integrated with the backend (REST API).",
-        "september_2023_to_april_2024": "September 2022 — April 2024",
+        "september_2023_to_april_2024": "August 2022 — March 2024",
         "private_practice_freelance": "Private practice — freelance",
         "nextjs_landing_responsibility": "Next.js — development of a landing page with a gallery, contact form, responsive layout, and SEO.",
         "wordpress_theme_cartjs": "WordPress theme development + Cart.js.",
@@ -53,7 +53,8 @@
         "chemist_process_engineer": "Chemist, Process Engineer",
         "specialization_org_petchem_synthesis": "Specialization: \"Basic Organic and Petrochemical Synthesis\"",
         "belarus_state_tech_university": "Belarusian State Technological University",
-        "faq_title": "Frequently Asked Questions"
+        "faq_title": "Frequently Asked Questions",
+        "september_2023_to_march_2024": "September 2023 — March 2024"
     },
     "aside": {
         "contacts": "Contacts",
@@ -100,7 +101,7 @@
     "groq": {
         "system_prompt": "You are a career assistant. Answer questions based strictly on the provided context.\nRules:\n- Be concise and factual\n- If information is not in the context, say: \"I don't have this information — feel free to reach out directly for clarification.\"\n- Do not over-praise or embellish\nContext:"
     },
-        "opengraph": {
+    "opengraph": {
         "title": "Georgiy Revazashvili | Resume and Projects",
         "description": "Good day! I am Georgiy Revazashvili, a frontend developer. Here you can find my professional resume, skills, and projects in web development.",
         "imageAlt": "Georgiy Revazashvili",
@@ -108,6 +109,77 @@
         "projectsDescription": "A list of projects I have participated in, with a description of the technologies used and functionality."
     },
     "projects": {
-        "title": "Projects"
+        "title": "Projects",
+        "description": "Commercial projects I have worked on or participated in.",
+        "fullDescription": "Description:",
+        "additionals": "Additionally, the project included:",
+        "gallery": "Gallery",
+        "back": "Back"
+    },
+    "cards": {
+        "1": {
+            "title": "Project 1",
+            "description": "Your AI-powered guide to Web3 updates. Like or dislike news to personalize your feed. Earn bonuses while browsing and exchange them for real tokens.",
+            "fullDescription": "A multi-page project built on the Nuxt meta-framework. It included: responsive layout, exchange interface with captcha and validation (integration with the backend and MetaMask API), adding iframes (Uniswap, YouTube), adding and managing Lottie animations, complex components (marquee ticker, bottom sheets for mobile, countdown timer), full text localization, server-side data fetching for winner data (leaderboard page), SEO configuration (OpenGraph, title, description, sitemap, robots), feedback form with validation and captcha, third-party slider library, Google services integration, SSR.",
+            "additionals": {
+                "0": { "title": "Admin Panel", "description": "Admin panel development for displaying ad statistics, task creation interface, manual user approval and task completion verification. Technologies: Vue 3, Vuetify, Chart.js." },
+                "1": { "title": "Advertisers Page", "description": "Landing page with a contact form to attract advertisers. Technologies: Nuxt, Lottie." },
+                "2": { "title": "Task Verification", "description": "Automated service for verifying user subscriptions on Telegram, Twitter (X) and Discord. Technologies: Vue 3." }
+            }
+        },
+        "2": {
+            "title": "Project 2",
+            "description": "A civic initiative uniting all caring people who are concerned about the future of their homeland, region, city, and street. We are just like you: energetic, competent, and bold — wanting positive change to finally happen.",
+            "fullDescription": "A multi-page resource built on a meta-framework. Key points: responsive layout, SSR, authorization/registration interface (Yandex Suggest/Geocoder service for registration, field validation), third-party slider library, server-side integration on almost all pages, Yandex Maps library, PWA (manifest, icons, instant install button for Android, multi-frame keyframe animation for PWA installation instructions on iOS, complex quiz page integration with state changes depending on user status, SEO.",
+            "additionals": {
+                "0": { "title": "Admin Panel", "description": "Admin panel built with Vuetify components for managing the entire resource." },
+                "1": { "title": "Dashboard", "description": "Service for displaying statistics and data visualization from the server. Technologies: Vue 3, Chart.js." }
+            }
+        },
+        "3": {
+            "title": "Project 3",
+            "description": "Manage a fully compliant real estate tokenization business on your own domain — with tools for asset issuance, investor management, and automated transactions.",
+            "fullDescription": "A multi-page promo site with a questionnaire, mega-menu, video banner, and contact form.",
+            "additionals": {
+                "0": { "title": "Email & PDF Layout", "description": "Email and PDF layout for user mailings." },
+                "1": { "title": "Questionnaires", "description": "Questionnaire development." },
+                "2": { "title": "Admin Panel", "description": "Partial participation in admin panel development for managing the entire resource." },
+                "3": { "title": "Client Side", "description": "Partial participation in client-side development." },
+                "4": { "title": "Blog & News", "description": "Partial participation in developing a custom Ghost theme." }
+            }
+        },
+        "4": {
+            "title": "Project 4",
+            "description": "Promoting the growth of crypto, blockchain, and Web3 projects through targeted marketing.",
+            "fullDescription": "Landing page with animation and a contact form."
+        },
+        "5": {
+            "title": "Project 5",
+            "description": "Uniting global innovators to make real estate a more accessible and transparent investment for everyone worldwide.",
+            "fullDescription": "Multi-page site with animation and a contact form."
+        },
+        "6": {
+            "title": "Project 6",
+            "description": "Manage your assets across multiple blockchains and keep your profile and transactions 100% private.",
+            "fullDescription": "Landing page with animation and a contact form.",
+            "additionals": {
+                "0": { "title": "Wallet Mobile App Development", "description": "Participated in UI kit development, part of the screens and internationalization of the wallet mobile app." }
+            }
+        },
+        "7": {
+            "title": "Project 7",
+            "description": "Build a fully functional website for your business within the Give4Charity dashboard and start receiving cryptocurrency.",
+            "fullDescription": "Multi-page resource with a contact form, authorization, and functionality for creating charity campaigns and promo pages using a page builder."
+        },
+        "8": {
+            "title": "Project 8",
+            "description": "Promo site for product promotion, with a contact form and gallery.",
+            "fullDescription": "Multi-page landing with a contact form, product pages, and gallery."
+        },
+        "9": {
+            "title": "Project 9",
+            "description": "Promo site for product promotion, with a contact form.",
+            "fullDescription": "Landing page with a contact form."
+        }
     }
 }

@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   ]
     },
   },
-  modules: ['nuxt-schema-org', '@nuxt/eslint', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@pinia/nuxt', '@nuxtjs/seo', '@nuxtjs/sitemap', '@nuxtjs/i18n'],
+  modules: ['nuxt-schema-org', '@nuxt/eslint', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@pinia/nuxt', '@nuxtjs/seo', '@nuxtjs/sitemap', '@nuxtjs/i18n', '@vueuse/nuxt'],
   css: ['~/assets/styles/main.css'],
   icon: {
     customCollections: [

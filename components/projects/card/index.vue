@@ -1,18 +1,22 @@
 <script setup lang="ts">
 import type { CardItem } from '@/assets/data/cards';
 
-defineProps<CardItem>();
+const props = defineProps<CardItem>();
+const { t } = useI18n();
 </script>
 
 <template>
-  <nuxt-link :to="link" target="_blank" class="card">
+  <nuxt-link :to="link" class="card">
     <div class="card-image-wrapper">
-      <nuxt-img :src="image" :alt="title" class="card-image" width="600" height="400" />
+      <nuxt-img :src="image" :alt="t(`cards.${props.id}.title`)" class="card-image" width="1200" height="630" />
+      <div class="labels-wrapper">
       <span class="card-label font-b5">{{ label }}</span>
+      <base-ui-label v-if="status" :status="status" />
+      </div>
     </div>
     <div class="card-body">
-      <h3 class="card-title font-b2">{{ title }}</h3>
-      <p class="card-description font-b4">{{ description }}</p>
+      <h3 class="card-title font-b2">{{ t(`cards.${props.id}.title`) }}</h3>
+      <p class="card-description font-b4">{{ t(`cards.${props.id}.description`) }}</p>
     </div>
   </nuxt-link>
 </template>
@@ -36,6 +40,27 @@ defineProps<CardItem>();
   position: relative;
   width: 100%;
   overflow: hidden;
+  isolation: isolate;
+}
+
+.card-image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #cbfb83; /* плотность подбери */
+  mix-blend-mode: multiply; /* попробуй также: multiply */
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card:hover .card-image-wrapper::after {
+  opacity: 0; /* на hover возвращаем оригинальные цвета */
+}
+
+.card:hover .card-image {
+  filter: none;
 }
 
 .card-image {
@@ -43,12 +68,28 @@ defineProps<CardItem>();
   height: auto;
   display: block;
   object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+  transition: filter 0.25s ease-in-out;
+  will-change: filter;
+  position: relative;
+  z-index: 0;
 }
 
-.card-label {
+.labels-wrapper {
   position: absolute;
   top: 8px;
   left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 2;
+}
+
+.card-label {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 4px;
   padding: 2px 8px;
   border: 1px solid var(--color-text-green);
   background-color: var(--color-black);

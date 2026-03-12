@@ -132,7 +132,7 @@ const currentLocale = computed(() => {
   max-width: 1920px;
   gap: 32px; */
     padding: 12px 16px;
-    gap: 12px;
+    gap: 4px;
   }
 
   .logo {
@@ -180,6 +180,7 @@ const currentLocale = computed(() => {
   align-items: center;
   justify-content: flex-end;
   gap: 32px; */
+  padding: 6px;
     gap: 16px;
     height: 52px;
   }
