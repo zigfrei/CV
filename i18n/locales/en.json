@@ -122,9 +122,18 @@
             "description": "Your AI-powered guide to Web3 updates. Like or dislike news to personalize your feed. Earn bonuses while browsing and exchange them for real tokens.",
             "fullDescription": "A multi-page project built on the Nuxt meta-framework. It included: responsive layout, exchange interface with captcha and validation (integration with the backend and MetaMask API), adding iframes (Uniswap, YouTube), adding and managing Lottie animations, complex components (marquee ticker, bottom sheets for mobile, countdown timer), full text localization, server-side data fetching for winner data (leaderboard page), SEO configuration (OpenGraph, title, description, sitemap, robots), feedback form with validation and captcha, third-party slider library, Google services integration, SSR.",
             "additionals": {
-                "0": { "title": "Admin Panel", "description": "Admin panel development for displaying ad statistics, task creation interface, manual user approval and task completion verification. Technologies: Vue 3, Vuetify, Chart.js." },
-                "1": { "title": "Advertisers Page", "description": "Landing page with a contact form to attract advertisers. Technologies: Nuxt, Lottie." },
-                "2": { "title": "Task Verification", "description": "Automated service for verifying user subscriptions on Telegram, Twitter (X) and Discord. Technologies: Vue 3." }
+                "0": {
+                    "title": "Admin Panel",
+                    "description": "Admin panel development for displaying ad statistics, task creation interface, manual user approval and task completion verification. Technologies: Vue 3, Vuetify, Chart.js."
+                },
+                "1": {
+                    "title": "Advertisers Page",
+                    "description": "Landing page with a contact form to attract advertisers. Technologies: Nuxt, Lottie."
+                },
+                "2": {
+                    "title": "Task Verification",
+                    "description": "Automated service for verifying user subscriptions on Telegram, Twitter (X) and Discord. Technologies: Vue 3."
+                }
             }
         },
         "2": {
@@ -132,8 +141,14 @@
             "description": "A civic initiative uniting all caring people who are concerned about the future of their homeland, region, city, and street. We are just like you: energetic, competent, and bold — wanting positive change to finally happen.",
             "fullDescription": "A multi-page resource built on a meta-framework. Key points: responsive layout, SSR, authorization/registration interface (Yandex Suggest/Geocoder service for registration, field validation), third-party slider library, server-side integration on almost all pages, Yandex Maps library, PWA (manifest, icons, instant install button for Android, multi-frame keyframe animation for PWA installation instructions on iOS, complex quiz page integration with state changes depending on user status, SEO.",
             "additionals": {
-                "0": { "title": "Admin Panel", "description": "Admin panel built with Vuetify components for managing the entire resource." },
-                "1": { "title": "Dashboard", "description": "Service for displaying statistics and data visualization from the server. Technologies: Vue 3, Chart.js." }
+                "0": {
+                    "title": "Admin Panel",
+                    "description": "Admin panel built with Vuetify components for managing the entire resource."
+                },
+                "1": {
+                    "title": "Dashboard",
+                    "description": "Service for displaying statistics and data visualization from the server. Technologies: Vue 3, Chart.js."
+                }
             }
         },
         "3": {
@@ -141,11 +156,26 @@
             "description": "Manage a fully compliant real estate tokenization business on your own domain — with tools for asset issuance, investor management, and automated transactions.",
             "fullDescription": "A multi-page promo site with a questionnaire, mega-menu, video banner, and contact form.",
             "additionals": {
-                "0": { "title": "Email & PDF Layout", "description": "Email and PDF layout for user mailings." },
-                "1": { "title": "Questionnaires", "description": "Questionnaire development." },
-                "2": { "title": "Admin Panel", "description": "Partial participation in admin panel development for managing the entire resource." },
-                "3": { "title": "Client Side", "description": "Partial participation in client-side development." },
-                "4": { "title": "Blog & News", "description": "Partial participation in developing a custom Ghost theme." }
+                "0": {
+                    "title": "Email & PDF Layout",
+                    "description": "Email and PDF layout for user mailings."
+                },
+                "1": {
+                    "title": "Questionnaires",
+                    "description": "Questionnaire development."
+                },
+                "2": {
+                    "title": "Admin Panel",
+                    "description": "Partial participation in admin panel development for managing the entire resource."
+                },
+                "3": {
+                    "title": "Client Side",
+                    "description": "Partial participation in client-side development."
+                },
+                "4": {
+                    "title": "Blog & News",
+                    "description": "Partial participation in developing a custom Ghost theme."
+                }
             }
         },
         "4": {
@@ -163,7 +193,10 @@
             "description": "Manage your assets across multiple blockchains and keep your profile and transactions 100% private.",
             "fullDescription": "Landing page with animation and a contact form.",
             "additionals": {
-                "0": { "title": "Wallet Mobile App Development", "description": "Participated in UI kit development, part of the screens and internationalization of the wallet mobile app." }
+                "0": {
+                    "title": "Wallet Mobile App Development",
+                    "description": "Participated in UI kit development, part of the screens and internationalization of the wallet mobile app."
+                }
             }
         },
         "7": {
