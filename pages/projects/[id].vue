@@ -63,6 +63,29 @@ const { direction } = useSwipe(dialogRef, {
 
 onMounted(() => window.addEventListener('keydown', onKeydown));
 onUnmounted(() => window.removeEventListener('keydown', onKeydown));
+
+useSeoMeta({
+  title: t(`cards.${id.value}.title`),
+  description: t(`cards.${id.value}.description`),
+  ogTitle: t(`cards.${id.value}.title`),
+  ogDescription:t(`cards.${id.value}.description`),
+  ogImageAlt: t(`cards.${id.value}.title`),
+  ogImageHeight: '630',
+  ogImageWidth: '1200',
+  ogImageType: 'image/png',
+  ogImageUrl: card.value?.image ?? '',
+  ogType: 'website',
+  ogUrl: 'https://revaz.vercel.app/',
+  ogSiteName: t(`cards.${id.value}.title`),
+  twitterImage: {
+    url: card.value?.image ?? '',
+    alt: t(`cards.${id.value}.title`),
+    type: 'image/png',
+    width: 1200,
+    height: 600,
+  },
+  titleTemplate: '%s',
+});
 </script>
 
 <template>
